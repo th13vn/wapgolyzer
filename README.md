@@ -9,7 +9,7 @@ Wapgolyzer use Wappalyzer's set of rules to detect. It sends a GET request to th
 ## Installation
 
 ```bash
-> go install github.com/th13ntc/wapgolyzer/cmd/wapgolyzer
+> go install github.com/th13ntc/wapgolyzer/cmd/wapgolyzer@latest
 ```
 
 ## Usage
@@ -22,125 +22,53 @@ Usage: wapgolyzer [options] <url>
   -u    Update fingerprints from Wappalyzer Github
 ```
 
+| Note: You have to use `-u` option for the first time using to crawl fingerprints.json detect
+
 ## Example
 
 ```bash
-> wapgolyzer https://radzad.com
+> wapgolyzer https://example.com
 ```
 
 Ouput:
 
 ```
 {
-  "url": "https://radzad.com",
+  "url": "http://example.com",
   "technologies": [
     {
-      "name": "litespeed",
+      "name": "azure cdn",
       "version": "",
       "type": [
-        "web servers"
+        "cdn"
       ]
     },
     {
-      "name": "http/3",
+      "name": "amazon ecs",
       "version": "",
       "type": [
-        "miscellaneous"
+        "iaas"
       ]
     },
     {
-      "name": "php",
-      "version": "7.4.22",
-      "type": [
-        "programming languages"
-      ]
-    },
-    {
-      "name": "wordpress",
+      "name": "azure",
       "version": "",
       "type": [
-        "cms",
-        "blogs"
+        "paas"
       ]
     },
     {
-      "name": "bootstrap",
+      "name": "amazon web services",
       "version": "",
       "type": [
-        "ui frameworks"
+        "paas"
       ]
     },
     {
-      "name": "elementor",
-      "version": "3.4.8",
-      "type": [
-        "page builders"
-      ]
-    },
-    {
-      "name": "wp rocket",
+      "name": "docker",
       "version": "",
       "type": [
-        "caching",
-        "wordpress plugins"
-      ]
-    },
-    {
-      "name": "jquery",
-      "version": "",
-      "type": [
-        "javascript libraries"
-      ]
-    },
-    {
-      "name": "extendify",
-      "version": "4.3.9",
-      "type": [
-        "wordpress plugins"
-      ]
-    },
-    {
-      "name": "contact form 7",
-      "version": "5.5.6",
-      "type": [
-        "wordpress plugins"
-      ]
-    },
-    {
-      "name": "woocommerce",
-      "version": "",
-      "type": [
-        "ecommerce",
-        "wordpress plugins"
-      ]
-    },
-    {
-      "name": "swiper",
-      "version": "",
-      "type": [
-        "javascript libraries"
-      ]
-    },
-    {
-      "name": "recaptcha",
-      "version": "",
-      "type": [
-        "security"
-      ]
-    },
-    {
-      "name": "wordfence login security",
-      "version": "1.0.9",
-      "type": [
-        "wordpress plugins",
-        "security"
-      ]
-    },
-    {
-      "name": "mysql",
-      "version": "",
-      "type": [
-        "databases"
+        "containers"
       ]
     }
   ]
