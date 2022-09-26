@@ -22,7 +22,7 @@ Usage: wapgolyzer [options] <url>
   -u    Update fingerprints from Wappalyzer Github
 ```
 
-> Note: You have to use `-u` option for the first time using to crawl fingerprints.json detect
+> Note: You have to use `-u` option for the first time using to crawl fingerprints.json rules
 
 ## Example
 
