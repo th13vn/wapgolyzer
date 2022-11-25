@@ -8,8 +8,8 @@ Wapgolyzer use Wappalyzer's set of rules to detect. It sends a GET request to th
 
 ## Installation
 
-```bash
-> go install github.com/th13ntc/wapgolyzer/cmd/wapgolyzer@latest
+```sh
+go install github.com/th13ntc/wapgolyzer/cmd/wapgolyzer@latest
 ```
 
 ## Usage
@@ -26,8 +26,8 @@ Usage: wapgolyzer [options] <url>
 
 ## Example
 
-```bash
-> wapgolyzer https://example.com
+```sh
+wapgolyzer https://example.com
 ```
 
 Ouput:
