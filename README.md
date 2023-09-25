@@ -9,7 +9,7 @@ Wapgolyzer use Wappalyzer's set of rules to detect. It sends a GET request to th
 ## Installation
 
 ```sh
-go install github.com/th13ntc/wapgolyzer/cmd/wapgolyzer@latest
+go install github.com/th13vn/wapgolyzer/cmd/wapgolyzer@latest
 ```
 
 ## Usage
@@ -83,7 +83,7 @@ package main
 import (
 	"fmt"
 
-	wapgolyzer "github.com/th13ntc/wapgolyzer/core"
+	wapgolyzer "github.com/th13vn/wapgolyzer/core"
 )
 
 func main() {
