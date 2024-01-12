@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	wapgolyzer "github.com/th13ntc/wapgolyzer/core"
+	wapgolyzer "github.com/th13vn/wapgolyzer/core"
 )
 
 func main() {
