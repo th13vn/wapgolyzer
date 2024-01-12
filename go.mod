@@ -1,4 +1,4 @@
-module github.com/th13ntc/wapgolyzer
+module github.com/th13vn/wapgolyzer
 
 go 1.18
 
