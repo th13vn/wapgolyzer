@@ -18,14 +18,21 @@ func main() {
 	/////////////////////////
 
 	var input, filename string
-	var u, d bool
+	var u, d, v bool
 	var o string
 	//var f string
 	flag.StringVar(&o, "o", "", "Output file with json format")
 	flag.BoolVar(&d, "d", false, "Default json file that hostname is file name")
 	flag.BoolVar(&u, "u", false, "Update fingerprints from Wappalyzer Github")
+	flag.BoolVar(&v, "v", false, "Show version")
 	//flag.StringVar(&f, "f", "", "Specific your fingerprints file")
 	flag.Parse()
+	if u {
+		wapgolyzer.UpdateFingerprintsFile(fgpFile)
+	}
+	if v {
+		fmt.Println("Wapgolyzer version " + wapgolyzer.VERSION)
+	}
 	/////////////////////////
 	lasts := flag.Args()
 	args := os.Args
@@ -41,9 +48,6 @@ func main() {
 	// if f != "" {
 	// 	fgpFile = f
 	// }
-	if u {
-		wapgolyzer.UpdateFingerprintsFile(fgpFile)
-	}
 	if o != "" {
 		tmp := strings.Replace(o, "/", "", -1)
 		filename = strings.Replace(tmp, "..", "", -1)

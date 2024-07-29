@@ -30,8 +30,8 @@ type Signature struct {
 }
 
 const (
-	technologyURL = "https://raw.githubusercontent.com/AliasIO/wappalyzer/master/src/technologies/%s.json"
-	categoriesURL = "https://raw.githubusercontent.com/wappalyzer/wappalyzer/master/src/categories.json"
+	technologyURL = "https://raw.githubusercontent.com/th13vn/wapgolyzer-fingerprints/main/technologies/%s.json"
+	categoriesURL = "https://raw.githubusercontent.com/th13vn/wapgolyzer-fingerprints/main/categories.json"
 )
 
 func makeTechFileURLs() []string {

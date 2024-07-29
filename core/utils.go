@@ -20,7 +20,8 @@ import (
 )
 
 const (
-	DIR = ".config/wapgolyzer"
+	VERSION = "v0.1.2"
+	CONFIG = ".config/wapgolyzer"
 )
 
 func mapCategories(fgp *Fingerprints, data []byte) error {
@@ -222,12 +223,12 @@ func validateURL(input string) error {
 }
 
 func SetupFingerprintsFile() string {
-	absoluteDir := filepath.Join(os.Getenv("HOME"), DIR)
+	absoluteDir := filepath.Join(os.Getenv("HOME"), CONFIG)
 	if _, err := os.Stat(absoluteDir); errors.Is(err, os.ErrNotExist) {
 		err := os.Mkdir(absoluteDir, os.ModePerm)
 		if err != nil {
 			fmt.Println(err)
 		}
 	}
-	return "./fingerprints.json"
+	return (absoluteDir + "/fingerprints.json")
 }
