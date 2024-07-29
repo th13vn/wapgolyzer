@@ -229,5 +229,5 @@ func SetupFingerprintsFile() string {
 			fmt.Println(err)
 		}
 	}
-	return (absoluteDir + "/fingerprints.json")
+	return "./fingerprints.json"
 }

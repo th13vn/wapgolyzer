@@ -71,16 +71,18 @@ func UpdateFingerprintsFile(fgpFile string) {
 	technologyURLs := makeTechFileURLs()
 	for _, technologyURL := range technologyURLs {
 		if err := fgp.gatherFingerprintsFromURL(technologyURL); err != nil {
-			log.Fatalf("Could not gather technology file %s: %v\n", technologyURL, err)
+			log.Printf("Could not gather technology file %s: %v\n", technologyURL, err)
+			return
 		}
 	}
 	// categories
 	if err := fgp.gatherFingerprintsFromURL(categoriesURL); err != nil {
-		log.Fatalf("Could not gather fingerprints %s: %v\n", categoriesURL, err)
+		log.Printf("Could not gather fingerprints %s: %v\n", categoriesURL, err)
+		return
 	}
 	log.Printf("Read fingerprints from the server\n")
-	log.Printf("Starting normalizing of %d fingerprints...\n", len(fgp.Apps))
 	//////////////////////////////////////////////////////////////////////////
+	log.Printf("Starting normalizing of %d fingerprints...\n", len(fgp.Apps))
 
 	// Write file
 	////////////////////////////////////////////////////
